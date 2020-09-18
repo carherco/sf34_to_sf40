@@ -1,0 +1,124 @@
+{
+    "name": "jose/lleegoapi",
+    "license": "proprietary",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        },
+        "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+        ]
+    },
+    "repositories": {
+        "0": {
+            "type": "vcs",
+            "url": "git@52.51.22.182:/home/git/lleegobundles/userbundle.git"
+        },
+        "1": {
+            "type": "vcs",
+            "url": "git@52.51.22.182:/home/git/lleegobundles/veturisbundle.git"
+        },
+        "2": {
+            "type": "vcs",
+            "url": "git@52.51.22.182:/home/git/lleegobundles/elasticbundle.git"
+        },
+        "3": {
+            "type": "vcs",
+            "url": "git@52.51.22.182:/home/git/lleegobundles/iberiabundle.git"
+        },
+        "4": {
+            "type": "vcs",
+            "url": "git@52.51.22.182:/home/git/lleegobundles/veciconnectbundle.git"
+        },
+        "5": {
+            "type": "vcs",
+            "url": "git@52.51.22.182:/home/git/lleegobundles/commonbundle.git"
+        },
+        "6": {
+            "type": "vcs",
+            "url": "git@52.51.22.182:/home/git/lleegobundles/pytonbundle.git"
+        },
+        "phpunit-bridge": {
+            "type": "path",
+            "url": "C:\\xampp\\web\\projects\\development\\lleego_api\\vendor\\symfony\\phpunit-bridge"
+        }
+    },
+    "require": {
+        "ext-curl": "*",
+        "symfony/symfony": "~3.0",
+        "doctrine/orm": "^2.6.3",
+        "doctrine/doctrine-bundle": "~1.4",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "sensio/distribution-bundle": "~5.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "raveren/kint": "^1.0",
+        "friendsofsymfony/user-bundle": "~2.0",
+        "friendsofsymfony/rest-bundle": "^1.7",
+        "jms/serializer-bundle": "^1.1",
+        "nelmio/api-doc-bundle": "^3.0",
+        "ruflin/elastica": "^3.2",
+        "nelmio/cors-bundle": "^1.4",
+        "symfony/assetic-bundle": "^2.8",
+        "lleego/userbundle": "dev-master",
+        "lleego/pytonbundle": "dev-master",
+        "lleego/veturisbundle": "dev-master",
+        "lleego/elasticbundle": "dev-master",
+        "lleego/iberiabundle": "dev-master",
+        "lleego/veciconnectbundle": "dev-master",
+        "lleego/commonbundle": "dev-master",
+        "lleego/ndcbundle": "dev-master",
+        "knplabs/gaufrette": "^0.4.0",
+        "gaufrette/aws-s3-adapter": "^0.4.0",
+        "symfony/monolog-bundle": "^3.3",
+        "goetas-webservices/xsd2php-runtime": "^0.2.8",
+        "elasticsearch/elasticsearch": "^7.6",
+        "liuggio/excelbundle": "^2.1",
+        "jms/translation-bundle": "dev-master",
+        "jms/i18n-routing-bundle": "2.0.4",
+        "jms/di-extra-bundle": "dev-master",
+        "snc/redis-bundle": "^3.1",
+        "predis/predis": "^1.1",
+        "globalpayments/php-sdk": "2.0.1",
+        "ext-zlib": "*"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "~3.0",
+        "symfony/phpunit-bridge": "^3.4",
+        "symfony/browser-kit": "^3.4",
+        "symfony/css-selector": "^3.4"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "symfony-var-dir": "var",
+        "symfony-bin-dir": "bin",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
+}
